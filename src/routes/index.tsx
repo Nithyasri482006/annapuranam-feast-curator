@@ -49,6 +49,7 @@ function Home() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="veil absolute inset-0" />
+        <div className="scrim absolute inset-0" />
         <div className="relative mx-auto w-full max-w-7xl px-5 pb-20 pt-32 sm:px-8">
           <div className="max-w-3xl">
             <Reveal>

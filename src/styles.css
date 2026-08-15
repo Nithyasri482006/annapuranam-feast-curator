@@ -104,9 +104,15 @@
   --gradient-gold: linear-gradient(100deg, var(--gold-soft), var(--gold));
   --gradient-veil: linear-gradient(
     180deg,
-    oklch(0.18 0.03 155 / 0.65) 0%,
-    oklch(0.18 0.03 155 / 0.35) 45%,
-    oklch(0.14 0.03 155 / 0.8) 100%
+    oklch(0.16 0.03 155 / 0.82) 0%,
+    oklch(0.16 0.03 155 / 0.62) 40%,
+    oklch(0.12 0.02 155 / 0.92) 100%
+  );
+  --gradient-scrim: linear-gradient(
+    100deg,
+    oklch(0.13 0.02 155 / 0.9) 0%,
+    oklch(0.13 0.02 155 / 0.6) 45%,
+    oklch(0.13 0.02 155 / 0.15) 100%
   );
 }
 
@@ -160,6 +166,10 @@
 
 @utility veil {
   background: var(--gradient-veil);
+}
+
+@utility scrim {
+  background: var(--gradient-scrim);
 }
 
 @utility text-gradient-gold {
