@@ -168,6 +168,16 @@
   background: var(--gradient-veil);
 }
 
+@utility veil-bottom {
+  background: linear-gradient(
+    to top,
+    oklch(0.11 0.02 155 / 0.95) 0%,
+    oklch(0.12 0.02 155 / 0.82) 35%,
+    oklch(0.14 0.02 155 / 0.42) 65%,
+    oklch(0.16 0.03 155 / 0.15) 100%
+  );
+}
+
 @utility scrim {
   background: var(--gradient-scrim);
 }
