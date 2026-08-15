@@ -140,7 +140,7 @@ function Home() {
                   loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
                 />
-                <div className="veil-bottom absolute inset-0" />
+                <div className="cardveil absolute inset-0" />
                 <div className="absolute inset-x-0 bottom-0 p-8 sm:p-10">
                   <h3 className="font-display text-4xl text-primary-foreground">{card.title}</h3>
                   <span className="gold-rule mt-5" />

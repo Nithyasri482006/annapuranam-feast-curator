@@ -168,7 +168,7 @@
   background: var(--gradient-veil);
 }
 
-@utility veil-bottom {
+@utility cardveil {
   background: linear-gradient(
     to top,
     oklch(0.11 0.02 155 / 0.95) 0%,
