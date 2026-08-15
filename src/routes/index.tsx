@@ -18,11 +18,11 @@ export const Route = createFileRoute("/")({
         content:
           "Authentic South Indian vegetarian and non-vegetarian catering for weddings, birthdays, corporate events and family functions.",
       },
-      { property: "og:title", content: "Annapuranam Catering — Traditional Taste, Memorable Celebrations" },
+      { property: "og:title", content: "Annapuranam Catering — South Indian Wedding & Event Catering" },
       {
         property: "og:description",
         content:
-          "Banana-leaf feasts, biryanis and traditional sweets catered with warmth for every occasion.",
+          "Authentic South Indian vegetarian and non-vegetarian catering for weddings, birthdays, corporate events and family functions.",
       },
     ],
   }),
