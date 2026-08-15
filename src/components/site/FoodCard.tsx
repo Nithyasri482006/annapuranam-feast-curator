@@ -10,8 +10,8 @@ export function FoodCard({
   name: string;
   description: string;
   image: string;
-  tag?: string;
-  className?: string;
+  tag?: string | undefined;
+  className?: string | undefined;
 }) {
   return (
     <article
