@@ -20,6 +20,31 @@ const preferences = ["Vegetarian", "Non-Vegetarian", "Both"];
 const fieldClass =
   "w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground transition-colors placeholder:text-muted-foreground/70 focus:border-gold focus:outline-none";
 
+function Field({
+  id,
+  label,
+  children,
+  error,
+}: {
+  id: string;
+  label: string;
+  children: React.ReactNode;
+  error?: string | undefined;
+}) {
+  return (
+    <div>
+      <label
+        htmlFor={id}
+        className="mb-2 block text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground"
+      >
+        {label}
+      </label>
+      {children}
+      {error ? <p className="mt-1.5 text-xs text-destructive">{error}</p> : null}
+    </div>
+  );
+}
+
 export function ContactForm({ defaults }: { defaults?: Partial<Values> }) {
   const [values, setValues] = useState<Values>({
     name: "",
@@ -76,26 +101,6 @@ export function ContactForm({ defaults }: { defaults?: Partial<Values> }) {
       </div>
     );
   }
-
-  const Field = ({
-    id,
-    label,
-    children,
-    error,
-  }: {
-    id: string;
-    label: string;
-    children: React.ReactNode;
-    error?: string;
-  }) => (
-    <div>
-      <label htmlFor={id} className="mb-2 block text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground">
-        {label}
-      </label>
-      {children}
-      {error ? <p className="mt-1.5 text-xs text-destructive">{error}</p> : null}
-    </div>
-  );
 
   return (
     <form onSubmit={onSubmit} noValidate className="surface-card rounded-3xl p-6 sm:p-9">

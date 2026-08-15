@@ -142,11 +142,7 @@ export function CateringPlanner() {
             <button
               type="button"
               onClick={() =>
-                navigate({
-                  to: "/contact",
-                  search: { occasion, preference, guests, date: date || undefined },
-                  hash: "enquiry",
-                })
+                navigate({ to: "/contact", hash: "enquiry" })
               }
               className="mt-6 w-full rounded-full bg-gold px-8 py-3.5 text-sm font-medium text-primary transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold-soft sm:w-auto"
             >
