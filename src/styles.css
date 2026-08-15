@@ -104,15 +104,15 @@
   --gradient-gold: linear-gradient(100deg, var(--gold-soft), var(--gold));
   --gradient-veil: linear-gradient(
     180deg,
-    oklch(0.16 0.03 155 / 0.82) 0%,
-    oklch(0.16 0.03 155 / 0.62) 40%,
-    oklch(0.12 0.02 155 / 0.92) 100%
+    oklch(0.16 0.03 155 / 0.55) 0%,
+    oklch(0.16 0.03 155 / 0.3) 40%,
+    oklch(0.11 0.02 155 / 0.8) 100%
   );
   --gradient-scrim: linear-gradient(
     100deg,
-    oklch(0.13 0.02 155 / 0.9) 0%,
-    oklch(0.13 0.02 155 / 0.6) 45%,
-    oklch(0.13 0.02 155 / 0.15) 100%
+    oklch(0.12 0.02 155 / 0.78) 0%,
+    oklch(0.12 0.02 155 / 0.42) 45%,
+    oklch(0.12 0.02 155 / 0) 100%
   );
 }
 
