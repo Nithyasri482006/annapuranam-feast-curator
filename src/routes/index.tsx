@@ -12,13 +12,13 @@ import { galleryImages, images, services, signatureDishes } from "@/lib/site-dat
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Annapuranam Catering — South Indian Wedding & Event Catering" },
+      { title: "Annapaathiram Catering — South Indian Wedding & Event Catering" },
       {
         name: "description",
         content:
           "Authentic South Indian vegetarian and non-vegetarian catering for weddings, birthdays, corporate events and family functions.",
       },
-      { property: "og:title", content: "Annapuranam Catering — South Indian Wedding & Event Catering" },
+      { property: "og:title", content: "Annapaathiram Catering — South Indian Wedding & Event Catering" },
       {
         property: "og:description",
         content:
@@ -40,20 +40,22 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden">
-        <img
-          src={images.heroFeast}
-          alt="Traditional South Indian feast served on a banana leaf with brass vessels"
-          width={1920}
-          height={1280}
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="veil absolute inset-0" />
-        <div className="scrim absolute inset-0" />
-        <div className="relative mx-auto w-full max-w-7xl px-5 pb-20 pt-32 sm:px-8">
+      <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-black">
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <iframe
+            src="https://www.youtube.com/embed/HsT3Mvqt2Dc?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=HsT3Mvqt2Dc&playsinline=1"
+            allow="autoplay; encrypted-media"
+            className="yt-bg-iframe"
+            tabIndex={-1}
+            title="Annapaathiram Catering Video Background"
+          ></iframe>
+        </div>
+        <div className="veil absolute inset-0 z-10 pointer-events-none" />
+        <div className="scrim absolute inset-0 z-10 pointer-events-none" />
+        <div className="relative z-20 mx-auto w-full max-w-7xl px-5 pb-20 pt-32 sm:px-8">
           <div className="max-w-3xl">
             <Reveal>
-              <p className="eyebrow text-gold">Annapuranam Catering</p>
+              <p className="eyebrow text-gold">Annapaathiram Catering</p>
             </Reveal>
             <Reveal delay={120}>
               <h1 className="mt-6 text-5xl leading-[1.02] text-primary-foreground sm:text-7xl lg:text-[5.2rem]">
@@ -247,21 +249,7 @@ function Home() {
       </Section>
 
       {/* GALLERY PREVIEW */}
-      <Section className="bg-secondary/50">
-        <SectionHeading eyebrow="Gallery" title="Moments We Cater" />
-        <div className="mt-14">
-          <GalleryGrid items={galleryImages.slice(0, 8)} />
-        </div>
-        <Reveal className="mt-12 text-center">
-          <Link
-            to="/gallery"
-            className="group inline-flex items-center gap-2 text-sm font-medium text-primary"
-          >
-            View Full Gallery
-            <ArrowRight className="h-4 w-4 text-gold transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
-        </Reveal>
-      </Section>
+
 
       <Testimonials />
       <CateringPlanner />

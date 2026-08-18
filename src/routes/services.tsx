@@ -10,13 +10,13 @@ import { images, services } from "@/lib/site-data";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Catering Services — Annapuranam Catering" },
+      { title: "Catering Services — Annapaathiram Catering" },
       {
         name: "description",
         content:
           "Wedding, birthday, corporate, family function and special event catering with customized South Indian menus.",
       },
-      { property: "og:title", content: "Catering Services — Annapuranam Catering" },
+      { property: "og:title", content: "Catering Services — Annapaathiram Catering" },
       {
         property: "og:description",
         content: "Detailed catering services for weddings, birthdays, corporate and family events.",

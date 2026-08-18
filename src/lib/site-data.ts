@@ -41,7 +41,7 @@ export const contactInfo = {
   phone: "+91 90000 00000",
   whatsapp: "+91 90000 00000",
   whatsappLink: "https://wa.me/919000000000",
-  email: "hello@annapuranamcatering.com",
+  email: "hello@annapaathiramcatering.com",
   location: "Chennai, Tamil Nadu, India",
   serviceArea: "Available across Tamil Nadu",
 };

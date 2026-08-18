@@ -77,17 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Annapuranam Catering — South Indian Wedding & Event Catering" },
+      { title: "Annapaathiram Catering — South Indian Wedding & Event Catering" },
       {
         name: "description",
         content:
           "Authentic South Indian vegetarian and non-vegetarian catering for weddings, birthdays, corporate events and family functions.",
       },
-      { name: "author", content: "Annapuranam Catering" },
+      { name: "author", content: "Annapaathiram Catering" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "Annapuranam Catering — South Indian Wedding & Event Catering" },
-      { name: "twitter:title", content: "Annapuranam Catering — South Indian Wedding & Event Catering" },
+      { property: "og:title", content: "Annapaathiram Catering — South Indian Wedding & Event Catering" },
+      { name: "twitter:title", content: "Annapaathiram Catering — South Indian Wedding & Event Catering" },
       { property: "og:description", content: "Authentic South Indian vegetarian and non-vegetarian catering for weddings, birthdays, corporate events and family functions." },
       { name: "twitter:description", content: "Authentic South Indian vegetarian and non-vegetarian catering for weddings, birthdays, corporate events and family functions." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1e00b80c3ff3d393809fd44cc5515e1d/id-preview-a9165431--44c8f7d2-b1b7-47cd-b656-1685ca1c2525.lovable.app-1786769785833.png" },

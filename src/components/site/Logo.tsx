@@ -38,7 +38,7 @@ export function Wordmark({
             tone === "inverse" ? "text-primary-foreground" : "text-primary",
           )}
         >
-          Annapuranam
+          Annapaathiram
         </span>
         <span className="eyebrow block text-[0.58rem] text-gold">Catering</span>
       </span>

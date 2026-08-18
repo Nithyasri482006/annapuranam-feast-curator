@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Annapuranam Catering design system.
+ * Annapaathiram Catering design system.
  * Deep forest green, warm gold, ivory, charcoal, terracotta.
  */
 
@@ -219,3 +219,21 @@
     transition: none;
   }
 }
+
+@utility yt-bg-iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 177.77vw;
+  pointer-events: none;
+}
+
+@media (max-aspect-ratio: 9/16) {
+  .yt-bg-iframe {
+    width: 56.25vh;
+    height: 100vh;
+  }
+}
+

@@ -20,7 +20,7 @@ export function Footer() {
           <div className="flex items-center gap-3">
             <KalashMark className="h-9 w-9 text-gold" />
             <div>
-              <p className="font-display text-2xl">Annapuranam Catering</p>
+              <p className="font-display text-2xl">Annapaathiram Catering</p>
               <p className="eyebrow mt-1 text-gold">Traditional Taste. Memorable Celebrations.</p>
             </div>
           </div>
@@ -87,7 +87,7 @@ export function Footer() {
 
       <div className="border-t border-primary-foreground/15">
         <div className="mx-auto w-full max-w-7xl px-5 py-6 text-xs text-primary-foreground/60 sm:px-8">
-          © 2026 Annapuranam Catering. All rights reserved.
+          © 2026 Annapaathiram Catering. All rights reserved.
         </div>
       </div>
     </footer>

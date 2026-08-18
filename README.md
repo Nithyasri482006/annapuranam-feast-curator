@@ -1,8 +1,8 @@
-# Annapuranam Elegance
+# Annapaathiram Elegance
 
-Build a Premium South Indian Catering Website — Annapuranam Catering
+Build a Premium South Indian Catering Website — Annapaathiram Catering
 
-Create a complete, modern, premium and visually stunning responsive website for Annapuranam Catering, a South Indian catering brand offering both Vegetarian and Non-Vegetarian catering for weddings, birthdays, family functions, corporate events and special occasions.
+Create a complete, modern, premium and visually stunning responsive website for Annapaathiram Catering, a South Indian catering brand offering both Vegetarian and Non-Vegetarian catering for weddings, birthdays, family functions, corporate events and special occasions.
 
 The website should feel like a premium Indian catering brand, combining authentic South Indian tradition with modern luxury web design.
 
@@ -48,7 +48,7 @@ Create a clean, elegant sticky navbar.
 
 Left:
 
-Annapuranam Catering
+Annapaathiram Catering
 
 Include a minimal premium logo inspired by a traditional Indian kalash/food symbol.
 
@@ -112,7 +112,7 @@ Text
 
 Small label:
 
-ANNAPURANAM CATERING
+ANNAPAATHIRAM CATERING
 
 Main headline:
 
@@ -418,7 +418,7 @@ The Taste of Tradition
 
 Content:
 
-Annapuranam Catering brings authentic South Indian flavours and warm hospitality to every celebration. From traditional vegetarian meals to delicious non-vegetarian favourites, every dish is prepared with attention to flavour, quality and presentation.
+Annapaathiram Catering brings authentic South Indian flavours and warm hospitality to every celebration. From traditional vegetarian meals to delicious non-vegetarian favourites, every dish is prepared with attention to flavour, quality and presentation.
 
 Highlight:
 
@@ -572,7 +572,7 @@ Your Celebration Deserves Great Food.
 
 Supporting text:
 
-Let Annapuranam bring authentic flavours and unforgettable hospitality to your next occasion.
+Let Annapaathiram bring authentic flavours and unforgettable hospitality to your next occasion.
 
 Buttons:
 
@@ -590,7 +590,7 @@ Create a sophisticated dark green footer.
 
 Logo:
 
-Annapuranam Catering
+Annapaathiram Catering
 
 Tagline:
 
@@ -614,7 +614,7 @@ Social media icons.
 
 Copyright:
 
-© 2026 Annapuranam Catering. All rights reserved.
+© 2026 Annapaathiram Catering. All rights reserved.
 
 ---
 
@@ -878,7 +878,7 @@ Build the complete responsive website now without asking unnecessary clarificati
 
 This project was built with [Lovable](https://lovable.dev).
 
-**Live app**: https://annapuranam-feast-curator.lovable.app
+**Live app**: https://annapaathiram-feast-curator.lovable.app
 
 ## Build with Lovable
 

@@ -11,13 +11,13 @@ import { galleryImages, images } from "@/lib/site-data";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Annapuranam Catering" },
+      { title: "Gallery — Annapaathiram Catering" },
       {
         name: "description",
         content:
           "Photographs of our wedding feasts, banana-leaf meals, biryanis, desserts and catering setups.",
       },
-      { property: "og:title", content: "Gallery — Annapuranam Catering" },
+      { property: "og:title", content: "Gallery — Annapaathiram Catering" },
       {
         property: "og:description",
         content: "A look at the food and celebrations we cater across weddings and events.",

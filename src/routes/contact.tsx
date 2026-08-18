@@ -9,7 +9,7 @@ import { contactInfo, images } from "@/lib/site-data";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Book Catering — Annapuranam Catering" },
+      { title: "Book Catering — Annapaathiram Catering" },
       {
         name: "description",
         content:

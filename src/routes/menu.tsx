@@ -12,13 +12,13 @@ import { images, menuCategories, menuItems } from "@/lib/site-data";
 export const Route = createFileRoute("/menu")({
   head: () => ({
     meta: [
-      { title: "Our Menu — Annapuranam Catering" },
+      { title: "Our Menu — Annapaathiram Catering" },
       {
         name: "description",
         content:
           "Explore vegetarian and non-vegetarian South Indian catering menus: meals, biryani, snacks, sweets and beverages.",
       },
-      { property: "og:title", content: "Our Menu — Annapuranam Catering" },
+      { property: "og:title", content: "Our Menu — Annapaathiram Catering" },
       {
         property: "og:description",
         content: "Flavours crafted for every kind of celebration — veg, non-veg, biryani and sweets.",

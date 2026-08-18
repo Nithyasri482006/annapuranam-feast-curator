@@ -19,7 +19,7 @@ export function FinalCTA() {
             Your Celebration Deserves Great Food.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
-            Let Annapuranam bring authentic flavours and unforgettable hospitality to your next
+            Let Annapaathiram bring authentic flavours and unforgettable hospitality to your next
             occasion.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">

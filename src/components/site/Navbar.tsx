@@ -25,93 +25,114 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
     return () => {
       document.body.style.overflow = "";
     };
   }, [open]);
 
+  const isSolid = scrolled || open;
+
   return (
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled
-          ? "border-b border-border/70 bg-background/90 backdrop-blur-xl"
-          : "border-b border-transparent bg-background/60 backdrop-blur-md",
+        isSolid
+          ? "bg-background/95 backdrop-blur-xl shadow-sm border-b border-gold/20 py-3"
+          : "bg-transparent border-b border-transparent py-5 sm:py-6"
       )}
     >
-      <div
-        className={cn(
-          "mx-auto flex w-full max-w-7xl items-center justify-between px-5 transition-all duration-500 sm:px-8",
-          scrolled ? "h-16" : "h-20 sm:h-24",
-        )}
-      >
-        <Link to="/" aria-label="Annapuranam Catering home" onClick={() => setOpen(false)}>
-          <Wordmark />
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 sm:px-8 relative">
+        <Link to="/" aria-label="Annapaathiram Catering home" onClick={() => setOpen(false)} className="z-50">
+          <Wordmark tone={isSolid ? "default" : "inverse"} />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
+        {/* Desktop Navigation */}
+        <nav className="hidden items-center gap-7 lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" aria-label="Primary">
           {links.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               activeOptions={{ exact: link.to === "/" }}
               activeProps={{ "data-active": "true" }}
-              className="group relative text-sm font-medium text-foreground/75 transition-colors hover:text-primary data-[active=true]:text-primary"
+              className={cn(
+                "group relative text-[15px] font-medium transition-colors hover:text-gold data-[active=true]:text-gold tracking-wide",
+                isSolid ? "text-foreground/80" : "text-primary-foreground/95"
+              )}
             >
               {link.label}
-              <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full group-data-[active=true]:w-full" />
+              <span className="absolute -bottom-1.5 left-1/2 h-[2px] w-0 -translate-x-1/2 bg-gold transition-all duration-300 group-hover:w-full group-data-[active=true]:w-full rounded-full" />
             </Link>
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4 z-50">
           <Link
             to="/contact"
-            className="hidden rounded-full bg-gold px-6 py-2.5 text-sm font-medium text-primary shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold-soft sm:inline-flex"
+            className="hidden sm:inline-flex items-center justify-center rounded-full bg-gold px-7 py-2.5 text-sm font-medium text-primary shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:bg-gold-soft border border-transparent hover:border-primary/10"
           >
-            Book Catering
+            Book Now
           </Link>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-primary transition-colors hover:bg-secondary lg:hidden"
+            className={cn(
+              "inline-flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-gold/20 hover:text-gold lg:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-gold",
+              isSolid ? "text-foreground/80" : "text-primary-foreground"
+            )}
           >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
 
+      {/* Mobile Navigation Dropdown */}
       <div
         className={cn(
-          "overflow-hidden border-t border-border/60 bg-background transition-[max-height,opacity] duration-500 lg:hidden",
-          open ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0",
+          "absolute inset-x-0 top-full overflow-hidden border-b border-gold/10 bg-background/98 backdrop-blur-xl transition-all duration-500 ease-in-out lg:hidden shadow-lg",
+          open ? "max-h-[85vh] opacity-100" : "max-h-0 opacity-0 border-transparent shadow-none"
         )}
       >
-        <nav className="flex flex-col gap-1 px-5 py-6 sm:px-8" aria-label="Mobile">
-          {links.map((link) => (
+        <div className="flex flex-col px-5 py-8 sm:px-8 h-full max-h-[80vh] overflow-y-auto">
+          {/* Subtle gold decoration at the top of the menu */}
+          <div className="flex justify-center mb-8">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+          </div>
+          
+          <nav className="flex flex-col gap-6 text-center" aria-label="Mobile">
+            {links.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                onClick={() => setOpen(false)}
+                activeOptions={{ exact: link.to === "/" }}
+                activeProps={{ "data-active": "true" }}
+                className="font-display text-3xl tracking-wide text-foreground/85 transition-colors hover:text-gold data-[active=true]:text-gold relative inline-block mx-auto w-fit"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          
+          <div className="mt-10 flex flex-col items-center gap-6">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
             <Link
-              key={link.to}
-              to={link.to}
+              to="/contact"
               onClick={() => setOpen(false)}
-              activeOptions={{ exact: link.to === "/" }}
-              activeProps={{ "data-active": "true" }}
-              className="border-b border-border/50 py-3.5 font-display text-2xl text-foreground/85 transition-colors data-[active=true]:text-primary"
+              className="inline-flex w-full max-w-[220px] items-center justify-center rounded-full bg-gold px-6 py-3.5 text-[15px] font-medium tracking-wide text-primary shadow-sm transition-all hover:bg-gold-soft active:scale-95"
             >
-              {link.label}
+              Book Now
             </Link>
-          ))}
-          <Link
-            to="/contact"
-            onClick={() => setOpen(false)}
-            className="mt-6 inline-flex items-center justify-center rounded-full bg-gold px-6 py-3.5 text-sm font-medium text-primary"
-          >
-            Book Catering
-          </Link>
-        </nav>
+          </div>
+        </div>
       </div>
     </header>
   );
 }
+

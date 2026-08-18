@@ -9,13 +9,13 @@ import { images } from "@/lib/site-data";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Annapuranam Catering" },
+      { title: "About — Annapaathiram Catering" },
       {
         name: "description",
         content:
-          "Annapuranam Catering brings authentic South Indian flavours, quality ingredients and warm hospitality to every celebration.",
+          "Annapaathiram Catering brings authentic South Indian flavours, quality ingredients and warm hospitality to every celebration.",
       },
-      { property: "og:title", content: "The Taste of Tradition — Annapuranam Catering" },
+      { property: "og:title", content: "The Taste of Tradition — Annapaathiram Catering" },
       {
         property: "og:description",
         content: "Traditional recipes, quality ingredients, hygienic preparation and customized menus.",
@@ -51,7 +51,7 @@ function About() {
             </h2>
             <span className="gold-rule mt-6" />
             <p className="mt-7 text-base leading-relaxed text-muted-foreground">
-              Annapuranam Catering brings authentic South Indian flavours and warm hospitality to
+              Annapaathiram Catering brings authentic South Indian flavours and warm hospitality to
               every celebration. From traditional vegetarian meals to delicious non-vegetarian
               favourites, every dish is prepared with attention to flavour, quality and
               presentation.
