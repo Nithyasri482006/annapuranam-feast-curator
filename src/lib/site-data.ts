@@ -15,6 +15,11 @@ import dishPaneer from "@/assets/dish-paneer.jpg";
 import storyBanner from "@/assets/story-banner.jpg";
 import kitchenPrep from "@/assets/kitchen-prep.jpg";
 import setupBuffet from "@/assets/setup-buffet.jpg";
+import occasionWedding from "@/assets/occasion-wedding.jpg";
+import occasionBirthday from "@/assets/occasion-birthday.png";
+import occasionCorporate from "@/assets/occasion-corporate.png";
+import occasionFamily from "@/assets/occasion-family.png";
+import occasionSpecial from "@/assets/occasion-special.png";
 
 export const images = {
   heroFeast,
@@ -159,7 +164,7 @@ export const services: Service[] = [
     description:
       "From the morning tiffin to the grand banana-leaf sappadu, we plan and serve every course of your wedding day with calm, practised hospitality.",
     offerings: ["Banana-leaf sappadu", "Tiffin & snack counters", "Veg and non-veg menus", "Trained serving team"],
-    image: dishSappadu,
+    image: occasionWedding,
   },
   {
     slug: "birthday",
@@ -168,7 +173,7 @@ export const services: Service[] = [
     description:
       "Menus built around the people you are celebrating — familiar favourites, crowd-pleasing biryanis and sweets to finish.",
     offerings: ["Biryani counters", "Snacks & starters", "Dessert selection", "Buffet or table service"],
-    image: dishChickenBiryani,
+    image: occasionBirthday,
   },
   {
     slug: "corporate",
@@ -177,7 +182,7 @@ export const services: Service[] = [
     description:
       "Punctual, neatly presented catering for meetings, launches and office celebrations, with menus sized to your schedule.",
     offerings: ["Working lunches", "Tea & snack breaks", "Boxed meal options", "On-time setup"],
-    image: setupBuffet,
+    image: occasionCorporate,
   },
   {
     slug: "family",
@@ -186,7 +191,7 @@ export const services: Service[] = [
     description:
       "Engagements, housewarmings, naming ceremonies and anniversaries — home-style cooking prepared at celebration scale.",
     offerings: ["Traditional meals", "Custom portions", "Sweet counters", "Home or hall service"],
-    image: dishMeals,
+    image: occasionFamily,
   },
   {
     slug: "special",
@@ -195,7 +200,7 @@ export const services: Service[] = [
     description:
       "Festivals, community gatherings and one-of-a-kind occasions catered around your menu, timing and guest count.",
     offerings: ["Fully customized menus", "Live counters", "Veg & non-veg combinations", "Flexible guest counts"],
-    image: nonvegFeast,
+    image: occasionSpecial,
   },
 ];
 

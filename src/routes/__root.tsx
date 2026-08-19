@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
+import { FloatingBookingWidget } from "@/components/site/FloatingBookingWidget";
 
 function NotFoundComponent() {
   return (
@@ -135,6 +136,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
+      <FloatingBookingWidget />
     </QueryClientProvider>
   );
 }

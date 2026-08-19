@@ -3,6 +3,8 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Wordmark } from "./Logo";
+import { Sheet, SheetContent } from "@/components/ui/sheet";
+import { CateringPlannerForm } from "./CateringPlanner";
 
 const links = [
   { to: "/", label: "Home" },
@@ -16,6 +18,7 @@ const links = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [bookingOpen, setBookingOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -71,12 +74,13 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-4 z-50">
-          <Link
-            to="/contact"
+          <button
+            type="button"
+            onClick={() => setBookingOpen(true)}
             className="hidden sm:inline-flex items-center justify-center rounded-full bg-gold px-7 py-2.5 text-sm font-medium text-primary shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:bg-gold-soft border border-transparent hover:border-primary/10"
           >
             Book Now
-          </Link>
+          </button>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -122,16 +126,25 @@ export function Navbar() {
           
           <div className="mt-10 flex flex-col items-center gap-6">
             <div className="h-px w-12 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
-            <Link
-              to="/contact"
-              onClick={() => setOpen(false)}
+            <button
+              type="button"
+              onClick={() => {
+                setOpen(false);
+                setBookingOpen(true);
+              }}
               className="inline-flex w-full max-w-[220px] items-center justify-center rounded-full bg-gold px-6 py-3.5 text-[15px] font-medium tracking-wide text-primary shadow-sm transition-all hover:bg-gold-soft active:scale-95"
             >
               Book Now
-            </Link>
+            </button>
           </div>
         </div>
       </div>
+      {/* Booking Sheet */}
+      <Sheet open={bookingOpen} onOpenChange={setBookingOpen}>
+        <SheetContent className="overflow-y-auto sm:max-w-md w-full">
+          <CateringPlannerForm onSuccess={() => setBookingOpen(false)} />
+        </SheetContent>
+      </Sheet>
     </header>
   );
 }
